@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hasil Perhitungan MCDM dengan Metode SAW</title>
+  <link rel="stylesheet"  href="{{url_for('static', filename='css/stylestep.css')}}">
+</head>
+
+<body>
+    <h1 style="margin: 25px 50px">Kalkulator MCDM dengan Metode Simple Additive Weighting (SAW)</h1>
+    <div class="hasil">
+      <h2 style="margin-bottom: 10px;"> Hasil Perhitungan </h2>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Alternatif</th>
+              {% for i in range(n_kriteria) %}
+                <th>{{ nama_kriteria [i] }}</th>
+              {% endfor %}
+              <th rowspan="2">Total</th>
+              <th rowspan="2">Peringkat</th>
+            </tr>
+            <tr>
+              {% for kriteria in range(n_kriteria) %}
+                <th>Nilai</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          
+          <tbody>
+            <td>Bobot</td>
+            {% for j in range(n_kriteria) %}
+            <td>{{ '{:.3f}'.format(bobot_kriteria[j][1]) }}</td>
+          {% endfor %}
+          <td></td>
+          <td></td>
+            {% for i in range(n_alternatif) %}
+              <tr>
+                <td> <b> {{ nama_alternatif [i] }} </b></td>
+                {% for j in range(n_kriteria) %}
+                  <td>{{ '{:.3f}'.format(hitung_pref [i][j]) }}</td>
+                {% endfor %}
+                <td>{{ '{:.3f}'.format(hasil[i]['nilai']) }}</td>
+                <td>{{ hasil[i]['peringkat'] }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <br>
+        <a href="{{url_for('step1')}}"> <button style="padding: 3px 18px;"> Kembali ke Step 1 </button> </a> <br> <br>      
+        <a class="keluarkalkulator" href="{{url_for('kalkulator')}}"> <button style="padding: 3px 22px;"> Keluar Kalkulator</button> </a>
+    </div>
+</body>
+</html>

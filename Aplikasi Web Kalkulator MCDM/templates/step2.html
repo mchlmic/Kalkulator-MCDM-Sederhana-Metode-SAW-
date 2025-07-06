@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator MCDM</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylestep.css')}}">
+</head>
+
+<body>
+  <h1 style="margin: 25px 50px">Kalkulator MCDM dengan Metode Simple Additive Weighting (SAW)</h1>
+  <div class="step2" >
+    <form method="POST" action="/hasil/">
+      <h2> Step 2 </h2>
+      <h2> Masukan Input yang Dibutuhkan </h2>
+    <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th> Alternatif</th>
+            {% for i in range(n_kriteria) %}
+              <th>
+              <input type="text" name="nama_kriteria_{{i+1}}" value="Kriteria {{i+1}}" required>
+            </th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in range(n_alternatif) %}
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td> <input type="text" name="nama_alternatif_{{i+1}}" value="Alternatif {{i+1}}" required> </td>
+            {% for j in range(n_kriteria) %}
+            <td><input type="text" name="alternatif_{{ i+1 }}_kriteria_{{ j+1 }}" required></td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <h2>Masukan Bobot Kriteria</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Jenis Kriteria</th>
+            <th>Bobot</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in range(n_kriteria) %}
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td>
+              <select name="jenis_kriteria_{{ i+1 }}">
+                <option value="benefit">Benefit</option>
+                <option value="cost">Cost</option>
+              </select>
+            </td>
+            <td><input type="text" name="bobot_kriteria_{{ i+1 }}" required></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p>
+        <button style="padding: 3px 18px;" type="submit">Next</button>
+      </p> 
+    </form>
+      <a class ="back" href="{{url_for('step1')}}"> <button style="padding: 3px 18px;"> Back </button> </a> <br> <br>   
+  </div>
+</body>
+</html>

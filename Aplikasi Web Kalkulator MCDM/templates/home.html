@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block konten %}
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Website MCDM</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylehome.css')}}">
+</head>
+
+<body>
+    <!-- container 1-->
+    <section>
+    <div class="container1" >
+        <div style="background-color: #0B2447; padding:35px; opacity:0.98;" >
+                <h1 style=" text-align: center;"><b> Multi-Criteria Decision Making (MCDM) </b></h1>
+                <p> 
+                    Merupakan suatu metode yang digunakan untuk membantu pengambilan keputusan yang melibatkan beberapa kriteria yang harus dipertimbangkan untuk
+                    dalam memilih alternatif terbaik dari beberapa alternatif yang tersedia.
+                </p>
+        </div> 
+        </div>
+    </section>
+
+    <!--container2-->
+    <section>
+        <div class="container2">
+            <div class="textct2">
+                <h1><b> Metode dalam MCDM </b></h1> 
+                <p> Analytical Hierarchy Process (AHP) </p>
+                <p> Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) </p>
+                <p> Simple Additive Weighting (SAW) </p>
+                <p> Weighted Product Model (WPM) </p>
+                <p> Multi-Attribute Utility Theory (MAUT) </p>
+                <p> Grey Relational Analysis (GRA) </p>
+                <p> Elimination and Choice Expressing Reality (ELECTRE) </p>
+                <p> Preference Ranking Organization Method for Enrichment Evaluation (PROMETHEE) </p>
+            </div>
+        </div>
+    </section>
+
+    <!--container3-->
+    <section>
+            <div class="container3">
+                <div class="textct3">
+                    <h1><b> Unsur-unsur MCDM: </b></h1>
+                    <p> Alternatif </p>
+                    <p> Kriteria </p>
+                    <p> Bobot </p>
+                    <p> Preferensi </p>
+                </div>
+        </div>
+    </section>
+
+     <!--container4-->
+    <section>
+        <div class="container4">
+            <div style="background-color: #082032; padding:40px; opacity:0.98;">
+                <h1><b> Langkah Pengambilan Keputusan MCDM: </b></h1>
+                <p> Identifikasi Masalah </p>
+                <p> Menyusun Preferensi </p>
+                <p> Mengevaluasi Alternatif </p>
+                <p> Menentukan Alternatif Terbaik </p>
+                <a href="{{url_for('materi')}}"><button style="padding: 3px 40px; margin-top: 5px;">Lanjut ke Materi</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- file Java Script dari file.js-->
+    <script src="{{ url_for('static', filename='js/file.js') }}"></script>
+
+</body>
+</html>
+
+{% endblock%}

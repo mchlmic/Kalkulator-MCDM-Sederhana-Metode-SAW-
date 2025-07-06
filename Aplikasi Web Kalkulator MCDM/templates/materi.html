@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block konten %}
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Materi</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylemateri.css')}}">
+</head>
+
+<body>
+    <div class="isimateri">
+        <h1> <b> Multi Criteria Decision Making (MCDM) </b> </h1>
+        <h2> Pengertian MCDM </h2>
+        <p>
+            Multi Criteria Decision Making (MCDM) merupakan salah satu metode yang digunakan dalam pengambilan keputusan yang berhubungan banyak alternatif dan kriteria pemilihan. 
+            Tujuan MCDM adalah memilih alternatif terbaik dari beberapa alternatif eksklusif yang saling menguntungkan atas dasar performansi umum dalam bermacam kriteria (atau atribut) yang ditentukan oleh pengambil keputusan. 
+            Mutli Criteria Decision Making (MCDM) telah banyak digunakan pada ruang lingkup yang luas, dalam hal ini pada proses pengambilan keputusan yang berkaitan dengan penyelesaian masalah dengan kompleksitas yang rumit dan sulit diukur secara pasti (Velasquez dan Hester, 2013; Kubler et al., 2016). 
+        </p>
+
+        <p>
+            Suatu permasalahan tergolong MCDM jika dan hanya jika setidaknya terdapat dua kriteria yang saling bertentangan dan melibatkan dua solusi alternatif (Tabucanon, 1988). Pada dasarnya MCDM merupakan bagian dari bidang keilmuan riset operasi. Berdasarkan basis teorinya, MCDM dikembangkan atas dasar pendekatan sistem (system approach). 
+            MCDM dapat digunakan sebagai salah satu algoritma dalam membuat DSS (Decission Support System), dimana DSS tidak digunakan untuk membuat keputusan, tetapi sistem hanya berfungsi sebagai alat bantu manajemen. 
+            Terdapat beberapa algoritma yang dapat digunakan untuk membangun DSS, antara lain: Pohon Keputusan (Decision Tree), Multi Criteria Decision Making (MCDM), dan lain-lain.
+        </p>
+        <p>
+            Proses pengambilan keputusan dari suatu sistem yang kompleks atu pendekatan “multiple criteria” digunakan untuk mendeskripsikan situasi keputusan. 
+            Dalam hal ini Multi Criteria Decision Making (MCDM) dianggap sebagai istilah untuk semua model dan teknik yang berhubungan dengan Multiple Ojective Decision Making (MODM) atau Multiple Attribute Decision Making (MADM) (Tabucanon. 1998). 
+            MODM melibatkan lebih dari satu kriteria dengan banyak alternatif, sedangkan MADM merupakan permasalahan pemilihan alternatif terbaik.
+        </p>
+
+        <h2>Metode-metode MCDM</h2>
+        <p> Berikut ini  merupakan metode-metode yang dapat digunakan untuk menyelesaikan permasalahan dalam MCDM:</p>
+        <p>
+            1. Analytic Hierarchy Process (AHP) <br>
+            Metode AHP digunakan untuk mengukur dan memilih alternatif terbaik dari beberapa kriteria dengan membandingkan pasangan kriteria secara berurutan. AHP menghasilkan bobot kriteria yang memungkinkan perangkingan alternatif.            
+        </p>
+        <p>
+            2. Simple Additive Weighting (SAW) <br>
+            Metode SAW menghitung bobot dari setiap kriteria dan menjumlahkan nilai bobot untuk menghasilkan nilai total untuk setiap alternatif. Alternatif dengan nilai total tertinggi dipilih sebagai alternatif terbaik.        </p>
+        <p>
+            3. Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) <br>
+            Metode TOPSIS digunakan untuk memilih alternatif terbaik dengan membandingkan jarak relatif antara setiap alternatif dengan ideal positif dan ideal negatif. Alternatif dengan jarak terpendek dari ideal positif dan terjauh dari ideal negatif dipilih sebagai alternatif terbaik.
+        </p>
+        <p>
+            4. Elimination and Choice Translating Reality (ELECTRE ) <br>
+            Metode ELECTRE menghilangkan alternatif yang tidak memenuhi kriteria dan memilih alternatif terbaik dengan membandingkan perbedaan antara setiap alternatif dan bobot referensi.        
+        </p>
+        <p>
+            5. Technique for Order Preference by Similarity to Ideal Solution and Preference Ranking Organization Method for Enrichment Evaluations (TOPSIS-PROMETHEE) <br>
+            Metode TOPSIS-PROMETHEE menggabungkan metode TOPSIS dan PROMETHEE (Preference Ranking Organization Method for Enrichment Evaluations) untuk memilih alternatif terbaik dengan mempertimbangkan keuntungan dan kerugian relatif antara alternatif dan bobot preferensi.
+        </p>
+        <p>
+            6. Grey Relational Analysis (GRA) <br>
+            Metode GRA digunakan untuk mengevaluasi kinerja alternatif dengan membandingkan hubungan relatif antara alternatif dan standar. GRA menghasilkan nilai relatif kinerja untuk setiap alternatif dan mengurutkannya dari yang terbaik hingga yang terburuk.            
+        </p>
+        <p>
+            7. VIKOR (VlseKriterijumska Optimizacija I Kompromisno Resenje)<br>
+            Metode VIKOR mengukur jarak relatif antara setiap alternatif dan solusi ideal dan menghasilkan nilai preferensi dan indeks keterampilan untuk setiap alternatif. Alternatif dengan indeks keterampilan tertinggi dipilih sebagai alternatif terbaik.            
+        </p>
+        <p>
+            8. Technique for Order Preference by Similarity to Ideal Solution and Grey Relational Analysis (TOPSIS-GRA) <br>
+            Metode TOPSIS-GRA menggabungkan metode TOPSIS dan GRA untuk memilih alternatif terbaik dengan mempertimbangkan jarak relatif antara setiap alternatif dan solusi ideal serta hubungan relatif antara alternatif dan standar.        </p>
+        <p>
+            Setiap metode memiliki kelebihan dan kekurangan masing-masing dan dapat digunakan sesuai dengan kebutuhan dan kondisi pengambilan keputusan.
+        </p>
+
+        <h2> Unsur-unsur dalam MCDM </h2>
+        <p> Berikut ini merupakan unsur-unsur yang ada dalam MCDM meliputi:</p>
+        <p>
+            1. Kriteria  <br>
+            Kriteria adalah faktor-faktor yang digunakan untuk mengevaluasi alternatif dalam pengambilan keputusan. Kriteria dapat berupa aspek kuantitatif seperti waktu dan biaya maupun kualitatif seperti brand dan citra, dan seringkali bersifat subjektif.
+        </p>
+        <p>
+            2. Alternatif <br>
+            Alternatif adalah pilihan-pilihan yang tersedia dalam pengambilan keputusan. Alternatif harus dapat diukur dan dibandingkan berdasarkan kriteria yang telah ditentukan.
+        </p>
+        <p>
+            3. Bobot <br>
+            Bobot adalah nilai yang diberikan untuk masing-masing kriteria untuk menunjukkan tingkat kepentingan atau prioritas relatif terhadap kriteria tersebut. Bobot digunakan untuk menghitung nilai total setiap alternatif dan memberikan urutan peringkat.
+        </p>
+        <p>
+            4. Preferensi <br>
+            Preferensi adalah tingkat kesukaan atau ketertarikan yang diberikan pada suatu alternatif dibandingkan alternatif lainnya. Preferensi digunakan dalam beberapa metode MCDM untuk memilih alternatif terbaik.
+        </p>
+        <p>
+            5. Skala Nilai <br>
+            Skala nilai digunakan untuk mengukur kriteria dan alternatif dalam pengambilan keputusan. Skala nilai digunakan untuk mengkonversi data kualitatif atau kuantitatif menjadi nilai numerik yang dapat dihitung dan dibandingkan dengan kriteria lainnya.
+        </p>
+        <p>
+            6. Metode Pengambilan Keputusan <br>
+            Metode pengambilan keputusan adalah algoritma atau model matematis yang digunakan untuk memilih alternatif terbaik dari beberapa alternatif yang tersedia. Metode ini biasanya melibatkan perhitungan matematis dan analisis statistik untuk menghasilkan peringkat alternatif.
+        <p>
+            7. Analisis Sensitivitas <br>
+            Analisis sensitivitas digunakan untuk mengevaluasi kepekaan hasil pengambilan keputusan terhadap perubahan dalam kriteria atau bobot. Analisis ini membantu dalam mengidentifikasi risiko dan ketidakpastian dalam pengambilan keputusan.
+            Dengan mempertimbangkan unsur-unsur ini, MCDM dapat membantu pengambil keputusan dalam memilih alternatif terbaik dengan mempertimbangkan kriteria yang beragam dan kompleks.
+        </p>
+
+        <h2>Langkah Pengambilan Keputusan dalam MCDM</h2>
+        <p>
+            Tujuan dari Multi Criteria Decision Making adalah untuk menentukan pilihan, memberi peringkat, melakukan klasifikasi, dan untuk mengurutkan alternatif 
+            berdasarkan bobot yang diberikan untuk menentukan pilihan alternatif terbaik.
+        </p>
+        <p>
+            Terdapat empat langkah pengambilan keputusan dalam MCDM: <br>
+            1. Identifikasi masalah <br>
+            2. Menyusun preferensi <br>
+            3. Mengevaluasi alternatif <br>
+            4. Menentukan alternatif terbaik <br>
+        </p>   
+
+        <h2>Matrik keputusan MCDM</h2>
+        <p>
+            Apabila terdapat m kriteria (C1, …, Cm) dan n alternatif (A1, …, An). Masalah MCDM dapat direpresentasikan menjadi:
+        </p>
+
+        <figure class="figure">        
+        <img src="{{url_for('static', filename='img/matriks_mcdm.png')}}" alt="Matrik Keputusan MCDM" width="300", height="100"/> 
+			<figcaption> <b>Matrik Keputusan MCDM </b> </figcaption>
+		</figure>
+
+        <p>
+            Secara umum teknik MCDM didasarkan pada matrik yang menggambarkan bahwa terdapat N kriteria (C) dan M alternatif (A), dimana amn skor alternatif dari n dibandingkan m kriteria. 
+            Nilai aij menunjukkan skor kinerja alternatif Aj pada kriteria Ci yang merupakan preferensi dari pengambil keputusan. 
+            Setiap kriteria mempunyai bobot wi yang menunjukkan tingkat pentingnya kriteria Ci dalam proses pengambilan keputusan.
+        </p>
+        
+        <p><a href="{{url_for('kalkulator')}}">Lanjut ke kalkulator</a></p>
+
+        <h3>Daftar Pustaka</h3>
+        <p>
+            Pramudhita, A. N., Suyono, H., & Yudaningtyas, E. (2015). Penggunaan Algoritma Multi Criteria Decision Making dengan Metode Topsis dalam Penempatan Karyawan. Jurnal EECCIS (Electrics, Electronics, Communications, Controls, Informatics, Systems), 9(1), 91-94. <br>
+            Jaya, R., Fitria, E., & Ardiansyah, R. (2020). Implementasi Multi Criteria Decision Making (MCDM) Pada Agroindustri: Suatu Telaah Literatur. Jurnal Teknologi Industri Pertanian, 30(2). <br>
+            Sartin, M. (2012). Pemilihan Supplier Bahan Baku Dengan Menggunakan Metode Multi Criteria Decision Making (Mcdm) with Promethee Dan Goal Programming Diperusahaan Azam Jaya Sidoarjo. Tekmapro: Journal of Industrial Engineering and Management, 4(2). <br>
+            Sehra, S. K., Brar, Y. S., & Kaur, N. (2016). Applications of multi-criteria decision making in software engineering. International Journal of Advanced Computer Science and Applications, 7(7), 472-477. <br>
+            Asadabadi, M. R. (2018). The Stratified Multi-Criteria Decision-Making Method. Knowledge-Based Systems, 162, 115-123. <br>
+            Mulliner, E., Malys, N., & Maliene, V. (2016). Comparative Analysis of MCDM Methods for the Assessment of Sustainable Housing Affordability. Omega, 146-156. <br>
+        </p>
+    </div>
+</body>
+</html>
+    
+{% endblock%}

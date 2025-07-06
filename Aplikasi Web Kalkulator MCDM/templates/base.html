@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- file CSS dari Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- file CSS dari stylebase.css-->
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylebase.css')}}">
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{url_for('home')}}">
+      <img src="{{url_for('static', filename='img/icon.jpg')}}" width="50", height="25"/>
+      </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+              <li class="nav-item1">
+                <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item2">
+                <a class="nav-link active" aria-current="page" href="{{url_for('materi')}}">Materi</a>
+              </li>
+              <li class="nav-item3">
+                <a class="nav-link active" aria-current="page" href="{{url_for('kalkulator')}}">Tutorial</a>
+              </li>
+            </li>
+          </ul>
+          <li class="nav-item4 d-flex">
+            <a class="nav-link active me-2" aria-current="page" href="{{url_for('step1')}}">Kalkulator MCDM</a>
+          </li>
+          </div>
+    </div>
+  </nav>
+
+    <div>
+        {% block konten%}
+
+        {% endblock %}
+    </div>
+
+    <footer>
+      <p style="margin-top: 5px;">Terima kasih telah mengunjungi situs aplikasi web ini, semoga Anda menikmati penelusuran Anda. <br>
+        Kami senang berbagi informasi dengan Anda. Jangan ragu untuk menghubungi jika Anda memiliki pertanyaan atau saran. </p>
+        <p> &copy; 2023 - Proyek Bebas </p>
+        <p style="text-align: left; font-size: 12px ;"> @Michael_Angkatan 2021 </p>
+    </footer>
+
+    <!-- file Java Script dari Bootstrap-->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+    
+</html>

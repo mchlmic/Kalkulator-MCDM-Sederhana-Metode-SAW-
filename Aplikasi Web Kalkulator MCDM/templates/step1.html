@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kalkulator MCDM</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylestep.css')}}">
+  </head>
+
+  <body>
+    <h1 style="margin: 25px 50px">Kalkulator MCDM dengan Metode Simple Additive Weighting (SAW)</h1>
+    <div class="step1">
+      <form method="POST" action="/step2">
+        <h2>Step 1 </h2>
+        <h2> Masukkan Jumlah Alternatif dan Jumlah Kriteria </h2>
+        <p>
+        <label>Jumlah Alternatif:</label>
+        <select style="width: 45px;" type="text" name="n_alternatif" >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+        </select> <br>
+        </p>
+        <p>
+        <label>Jumlah Kriteria:</label>
+        <select style="width: 45px;" type="text" name="n_kriteria" >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select> <br>
+        </p>
+        <p>
+        <button style="padding: 3px 18px;" type="submit">Next</button>
+        </p>
+      </form>
+        <a style="float:right;" href="{{url_for('kalkulator')}}"> Back </a>
+    </div>
+  </body>
+</html>

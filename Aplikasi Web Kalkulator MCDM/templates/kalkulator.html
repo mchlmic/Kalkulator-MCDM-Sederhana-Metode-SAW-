@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block konten %}
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Kalkulator</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/stylekalkulator.css')}}">
+</head>
+
+    <body>
+        <div class="kalkulator">
+            <h5> <b> Program kalkulator Multi Criteria Decision Making (MCDM) Menggunakan Metode Simple Additive Weighting (SAW) </b> </h5>
+            <br>
+            <p> Langkah-langkah atau algoritma dalam penyelesaian masalah Multi Criteria Decision Making (MCDM) dengan metode Simple Additive Weighting (SAW): </p>
+            <p> 1. Identifikasi kriteria yang akan digunakan dalam evaluasi alternatif dan berikan nilai kinerja untuk setiap alternatif i pada kriteria j (Xij) <br>
+                (Alternatif adalah banyaknya pilihan atau opsi yang tersedia) <br>
+                (Kriteria adalah aspek apa saja yang digunakan untuk membedakan atau memilih alternatif yang tersedia) </p>
+
+            <p> 2. Tentukan nilai bobot relatif (W) untuk setiap j kriteria, serta tentukan jenis bobot merupakan benefit atau cost <br>
+                (Bobot adalah nilai relatif atau proporsi yang diberikan pada setiap kriteria) <br>
+                (Total nilai bobot untuk seluruh kriteria adalah 100%) <br>
+
+                Kriteria benefit adalah kriteria yang memberikan manfaat atau keuntungan bagi pengambil keputusan dengan semakin tinggi nilai kriteria benefit, semakin baik keputusan yang diambil. 
+                Contoh kriteria benefit adalah tingkat keuntungan, peningkatan pendapatan, peningkatan kualitas, peningkatan produktivitas, dan lain-lain. <br>
+
+                Kriteria cost adalah kriteria yang memberikan biaya atau kerugian bagi pengambil keputusan dengan semakin rendah nilai kriteria cost, semakin baik keputusan yang diambil.
+                Contoh kriteria cost adalah biaya produksi, biaya operasional, risiko, kerusakan lingkungan, dan lain-lain.
+            </p>
+
+           <p> 3. Normalisasi bobot kriteria (rij) serta matriks keputusan dengan menggunakan rumus: </p> 
+
+            <figure class="figure">        
+                <img src="{{url_for('static', filename='img/rumus normalisasi kriteria.png')}}" width="500" height="auto" object-fit="contain" />
+                    <figcaption> <b> Rumus Normalisasi Bobot kriteria</b> </figcaption>
+            </figure>
+
+            <p> 4. Hitung nilai preferensi untuk setiap i alternatif dengan rumus: </p>
+
+            <figure class="figure">        
+                <img src="{{url_for('static', filename='img/rumuspreferensi.png')}}" width="120" height="auto" object-fit="contain" />
+                    <figcaption> <b> Rumus Preferensi </b> </figcaption>
+            </figure>
+
+            <p> 5. Urutkan alternatif berdasarkan nilai preferensi dari yang tertinggi hingga yang terendah </p>
+            
+            <p> 6. Pilih alternatif dengan nilai preferensi tertinggi sebagai solusi terbaik </p>
+
+            <h2 style="margin-top: 5px; margin-bottom: 15px;"> Tutorial Penggunaan Kalkulator MCDM </h2>
+
+            <p> <b> Step 1: Masukan Jumlah Alternatif dan Jumlah Kriteria </b> </p>
+
+            <p> <b> Step 2: Masukkan Nama Alternatif dan Nama Kriteria, Masukan Nilai Alternatif i pada Kriteria j, 
+                Masukan Nilai Bobot Kriteria, Serta Pilih Kriteria Termasuk Benefit atau Cost </b> </p>
+
+            <a href="{{url_for('step1')}}">Kalkulator MCDM</a> 
+        </div>
+    </body>
+</html>
+    
+{% endblock%}

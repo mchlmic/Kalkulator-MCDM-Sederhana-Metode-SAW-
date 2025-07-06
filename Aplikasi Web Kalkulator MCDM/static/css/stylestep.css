@@ -1,0 +1,100 @@
+    body {
+        background-color: #edf3f899    ;
+    }
+    
+    h1{
+        background-color: #FFFBEB;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .step1{
+        background-color: white;
+        border: 4px solid #070A52;
+        display: inline-block;
+        padding: 15px;
+        margin-left: 50px;
+    }
+
+    .step1 button:hover {
+        background-color: #19376D;
+        color: white;
+        cursor: pointer;
+    }
+
+    .step1 a{
+    color: #5ab1fc;
+    }
+
+    .step1 a:hover {
+        color: white;
+        background-color: #09638d;
+    }
+    
+    .step1 a:active {
+        color: white;
+        background-color: #DF2E38;
+    }
+    
+    .step2 {
+        background-color: white;
+        border: 4px solid #113F67;
+        display: inline-block;
+        padding: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+    }
+
+    .step2 button:hover {
+        background-color: #1b735d;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .step2 .back button:hover {
+    background-color: #4e3891;
+    color: white;
+    cursor: pointer;
+    }
+    
+    .hasil{
+        background-color: white;
+        border: 4px solid;
+        border-color: #0A3442;
+        display: inline-block;
+        padding: 15px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .hasil button:hover {
+        background-color: #1D1CE5;
+        color: white;
+        cursor: pointer;
+    }
+
+    .hasil .keluarkalkulator button:hover {
+        background-color: #E02401;
+        color: white;
+        cursor: pointer;
+    }
+
+    .step2 th {
+        background-color: #A9D2FF;
+    }
+
+    .hasil th {
+        background-color: #bccffee0; 
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #153462;
+        text-align: center;
+    }

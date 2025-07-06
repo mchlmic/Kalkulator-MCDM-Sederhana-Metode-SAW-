@@ -1,3 +1,5 @@
+Kalkultor MCDM berbasis web ini dibangun dengan Framework Flask (Python).
+
 Cara Penggunan Aplikasi Web Kalkulator MCDM:
 1. Download file Aplikasi Web Kalkulator MCDM.rar
 2. Ekstrak file rar tersebut
